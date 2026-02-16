@@ -59,8 +59,8 @@ def viterbi_with_prob(hmm, emission):
                          CONFIG['filter']['basic']['dict']['n_effective']))
         return None, -np.inf
     if hmm.l_effective > float(CONFIG['hmm']['l_effective_max']):
-        LOG.info("Skip the HMM as it is too long (%d) according to the "
-                 "filter criterion max hmm.l_effective (%d).", hmm.l_effective,
+        LOG.info("Skip the HMM as it is too long (%s) according to the "
+                 "filter criterion max hmm.l_effective (%s).", hmm.l_effective,
                  CONFIG['hmm']['l_effective_max'])
         return None, -np.inf
 

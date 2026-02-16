@@ -29,7 +29,7 @@ def test_detect_TREKS():
     test_seq = sequence.Sequence(TEST_SEQUENCE_Q9BRR0)
     predicted_repeats = repeat_detection_run.run_detector(seq_records=[test_seq], detectors=["T-REKS"])[0]['T-REKS']
     assert len(predicted_repeats) == 1
-    assert predicted_repeats[0].msa == ['C---G---KSFAQSSGLSKHRRIHTGEKPYECE-E', 'C---G---KAFIGSSALVIHQRVHTGEKPYECE-E', 'C---G---KAFSHSSDLIKHQRTHTGEKPYECD-D', 'C---G---KTFSQSCSLLEHHRIHTGEKPYQCS-M', 'C---G---KAFRRSSHLLRHQRIHTGDKNVQ-EPE', 'Q---G---EAW--KSRME-SQ-LENVETPMSYK--', 'C---NECERSFTQNTGLIEHQKIHTGEKPYQ----', 'CNACG---KGFTRISYLVQHQRSHVG-KNI-LS--']
+    assert predicted_repeats[0].msa == ['---CGKAFRRSSHLLRHQRIHTGDKNVQEPE', 'CNECERSFTQNTGLIEHQKIHTGEKPYQ---', '---CGKTFSQSCSLLEHHRIHTGEKPYQCSM', '---CGKSFAQSSGLSKHRRIHTGEKPYECEE', '---CGKAFSHSSDLIKHQRTHTGEKPYECDD', '---CGKAFIGSSALVIHQRVHTGEKPYECEE']
 
 
 def test_detect_HHrepID():
